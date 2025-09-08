@@ -19,8 +19,11 @@
         ]
     ],
     "persist": "com.pvzge.app",
-    "checkver": "github",
+    "checkver": {
+         "url": "https://github.com/Gzh0821/pvzg_site/releases",
+        "regex": "tag/v?([\\d.-]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/v$version/pvge-$version.zip"
+        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip"
     }
 }
