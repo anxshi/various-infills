@@ -1,0 +1,27 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "0.4.1.3",
+    "description": "An endless garden requires an endless defense! A rewritten Plants vs Zombies 2 PC port",
+    "homepage": "https://pvzge.com/",
+    "license": "Freeware",
+    "notes": "",
+    "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.4.1.3/pvzge-0.4.1.3.zip",
+    "hash": "eed7d06250810f3d0c79aa510a6d9556d30c7654b0973fd8011420149bf1fc09",
+    "post_install": [
+        "if (!(Test-Path \"$persist_dir\\com.pvzge.app\") -and (Test-Path \"$env:USERPROFILE\\com.pvzge.app\")) {",
+        "    info \"Moving configs to persist directory...\"",
+        "    Copy-Item -Path \"$env:USERPROFILE\\com.pvzge.app\\*\" -Destination \"$persist_dir\\com.pvzge.app\" -Force -Recurse | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "pvzge-$version.exe",
+            "PvZ2 Gardendless"
+        ]
+    ],
+    "persist": "com.pvzge.app",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/v$version/pvge-$version.zip"
+    }
+}
