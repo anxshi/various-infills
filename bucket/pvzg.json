@@ -14,7 +14,7 @@
     ],
     "shortcuts": [
         [
-            "pvzge-0.4.1.3.exe",
+            "pvzge-$version.exe",
             "PvZ2 Gardendless"
         ]
     ],
