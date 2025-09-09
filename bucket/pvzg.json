@@ -12,7 +12,12 @@
         "    Copy-Item -Path \"$env:USERPROFILE\\com.pvzge.app\\*\" -Destination \"$persist_dir\\com.pvzge.app\" -Force -Recurse | Out-Null",
         "}"
     ],
-  
+    "shortcuts": [
+        [
+            "pvzge-0.4.2.exe",
+            "PvZ2 Gardendless"
+        ]
+    ],
     "persist": "com.pvzge.app",
     "checkver": {
         "url": "https://github.com/Gzh0821/pvzg_site/releases",
