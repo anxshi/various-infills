@@ -14,7 +14,21 @@
             "hash": "068b4cccfa57cf38d5858b88778be1379809054cfb7d1d394f496da3c603334a"
         }
     },
-   
+    "bin": [
+        [
+            "Filen.exe",
+            "filen"
+        ]
+    ],
+    "pre_uninstall": [
+    " if ($purge) {msiexec.exe /x $dir\\build\\winfsp-*.msi /qn}"    
+    ],
+    "shortcuts": [
+        [
+            "Filen.exe",
+            "Filen Desktop"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/FilenCloudDienste/filen-desktop/"
     },
