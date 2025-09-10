@@ -14,32 +14,7 @@
             "hash": "068b4cccfa57cf38d5858b88778be1379809054cfb7d1d394f496da3c603334a"
         }
     },
-    "pre_install": "",
-    "installer": {
-        "script": ""
-    },
-    "post_install": [
-        "",
-        ""
-    ],
-    "uninstaller": {
-        "script": ""
-    },
-    "bin": "",
-    "env_add_path": [
-        "",
-        ""
-    ],
-    "shortcuts": [
-        [
-            "filen.exe",
-            "Filen Desktop"
-        ]
-    ],
-    "persist": [
-        "",
-        ""
-    ],
+   
     "checkver": {
         "github": "https://github.com/FilenCloudDienste/filen-desktop/"
     },
