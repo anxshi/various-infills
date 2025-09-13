@@ -1,9 +1,14 @@
 {
+    "##": "I think this isn't actually needed because lite-xl already provides a scoop manifest in their lpm repo",
     "version": "1.4.2",
     "description": "A Lite XL plugin manager (lpm) that provides an easy way of installing, and uninstalling plugins from lite-xl, as well as different version of lite-xl.",
     "homepage": "https://lite-xl.com/",
     "license": "https://github.com/lite-xl/lite-xl-plugin-manager/blob/master/LICENSE",
-    "notes": "",
+    "notes": [
+        "This manifest is probably redundant",
+        "considering the lpm repo already provides a scoop manifest:",
+        "scoop install https://github.com/lite-xl/lite-xl-plugin-manager/blob/master/lite-xl-plugin-manager.json"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/lite-xl/lite-xl-plugin-manager/releases/download/v1.4.2/lpm.x86_64-windows.exe#/lpm.exe",
