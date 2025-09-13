@@ -1,0 +1,30 @@
+{
+    "version": "1.4.2",
+    "description": "A Lite XL plugin manager (lpm) that provides an easy way of installing, and uninstalling plugins from lite-xl, as well as different version of lite-xl.",
+    "homepage": "https://lite-xl.com/",
+    "license": "https://github.com/lite-xl/lite-xl-plugin-manager/blob/master/LICENSE",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lite-xl/lite-xl-plugin-manager/releases/download/v1.4.2/lpm.x86_64-windows.exe",
+            "hash": "cafa1242e1f1b966c9f525db3e2b7f42fc4ddb6667de6105619774875bd4cba0"
+        }
+    },
+    "bin": "lpm.exe",
+    "shortcuts": [
+		[
+			"lpm.exe", 
+			"Lite-XL Plugin Manager"
+		]
+	],
+    "checkver": {
+        "url": "https://github.com/lite-xl/lite-xl-plugin-manager"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lite-xl/lite-xl-plugin-manager/releases/download/v$version/lpm.x86_64-windows.exe"
+            }
+        }
+    }
+}
