@@ -1,6 +1,6 @@
 param(
     # overwrite upstream param
-    [String]$upstream = "anxshi/various-infills:main"
+    [String]$upstream = "anxshi/various-infills:master"
 )
 
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
