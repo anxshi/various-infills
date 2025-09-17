@@ -8,22 +8,15 @@
     "depends": "extras/firefox",
     "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.09.07.1.zip",
     "extract_dir": "Phoenix-2025.09.07.1\\windows",
-    "pre_install": "",
     "post_install": [
-        "Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$(appdir firefox)\\current\\phoenix.cfg\" -Force",
-        "if (Test-Path \"$(appdir firefox)\\current\\defaults\") {",
-        "Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$(appdir firefox)\\current\\defaults\\pref\\phoenix.js\" -Force",
-        "}",
-        "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$(appdir firefox)\\current\\distribution\\policies.json\" -Force"
+        "Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$(appdir firefox)\\current\" -Force",
+        "Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$(appdir firefox)\\current\\defaults\\pref\" -Force",
+        "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$(appdir firefox)\\current\\distribution\" -Force"
     ],
     "pre_uninstall": [
         "Remove-Item \"$(appdir firefox)\\current\\phoenix.cfg\" -Force",
         "Remove-Item \"$(appdir firefox)\\current\\defaults\\pref\\phoenix.js\" -Force",
         "Remove-Item \"$(appdir firefox)\\current\\distribution\\policies.json\" -Force"
-    ],
-    "persist": [
-        "",
-        ""
     ],
     "checkver": {
         "github": "https://github.com/celenityy/Phoenix"
