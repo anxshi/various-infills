@@ -1,0 +1,43 @@
+{
+    "##": "experimental",
+    "version": "2025.09.07.1",
+    "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
+    "homepage": "https://phoenix.celenity.dev/",
+    "license": "GPL-3.0-or-later",
+    "notes": "", 
+    "depends": "extras/firefox",
+    "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.09.07.1.zip",
+    "extract_dir": "Phoenix-2025.09.07.1\\windows",
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "Copy-Item $dir\\phoenix.cfg $(appdir firefox)\\current\\phoenix.cfg",
+        "if (Test-Path $(appdir firefox)\\current\\defaults) {",
+        "mkdir -p $(appdir firefox)\\current\\defaults\\pref",
+        "}",
+        "Copy-Item $dir\\defaults\\pref\\phoenix.js $(appdir firefox)\\current\\defaults\\pref\\phoenix.js",
+        "Copy-Item $dir\\distribution\\policies.json $(appdir firefox)\\current\\distribution\\policies.json"
+
+    ],
+    "uninstaller": {
+        "script": ""
+    },
+    "bin": "",
+    "env_add_path": [
+        "",
+        ""
+    ],
+    "persist": [
+        "",
+        ""
+    ],
+    "checkver": {
+        "github": "https://github.com/celenityy/Phoenix"
+    },
+    "autoupdate": {
+        "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/$version.zip",
+        "extract_dir": "Phoenix-$version\\windows"
+    }
+}
