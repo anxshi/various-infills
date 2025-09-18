@@ -4,7 +4,6 @@
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
-    "notes": "", 
     "depends": "extras/firefox",
     "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.09.07.1.zip",
     "extract_dir": "Phoenix-2025.09.07.1\\windows",
