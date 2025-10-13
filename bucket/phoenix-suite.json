@@ -9,7 +9,7 @@
     },
     "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.10.03.1.zip",
     "extract_dir": "Phoenix-2025.10.03.1\\windows",
-    "pre_install": [
+    "post_install": [
         "# Check for firefox installation",
         "$potentialPaths = @(",
         "   \"$Env:USERPROFILE\\scoop\\apps\\firefox-eme-free\\current\",",
@@ -20,13 +20,15 @@
         "# Check each potential path",
         "foreach ($path in $potentialPaths) {",
         "   if (Test-Path -Path $path) {",
+        "       $firefoxPath = $path",
         "       info 'Firefox Installation found!'",
-        "       return $firefoxPath = $path",
+        "       break",
         "   }",
         "}",
-        "error 'No Firefox Installation found!'"
-    ],
-    "post_install": [
+        "if ($firefoxPath -eq $null) {",
+        "   abort 'No Firefox Installation found!'",
+        "}",
+        "# Copy Files to Firefox Path",
         "Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$firefoxPath\" -Force",
         "Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$firefoxPath\\defaults\\pref\" -Force",
         "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\distribution\" -Force"
