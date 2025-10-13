@@ -22,7 +22,7 @@
         "   if (Test-Path -Path $path) {",
         "       $firefoxPath = $path",
         "       info 'Firefox Installation found!'",
-        "       exit",
+        "       return",
         "   }",
         "}",
         "error 'No Firefox Installation found!'"
