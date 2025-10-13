@@ -17,7 +17,7 @@
         "}"
     ],
     "post_install": [
-        "$firefoxPath = $(appdir firefox-eme-free)\\current",
+        "$firefoxPath = $(appdir firefox-eme-free)\"current",
         "Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$firefoxPath\" -Force",
         "Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$firefoxPath\\defaults\\pref\" -Force",
         "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\distribution\" -Force"
