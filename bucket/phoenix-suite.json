@@ -14,7 +14,7 @@
         "$potentialPaths = @(",
         "   \"$Env:USERPROFILE\\scoop\\apps\\firefox-eme-free\\current\",",
         "   \"$Env:USERPROFILE\\scoop\\apps\\firefox\\current\",",
-        "   \"$Env:ProgramFiles\\Mozilla FireFox\",",
+        "   \"$Env:ProgramFiles\\Mozilla FireFox\"",
         ")",
         "$firefoxPath = $null",
         "# Check each potential path",
