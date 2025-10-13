@@ -21,7 +21,7 @@
         "foreach ($path in $potentialPaths) {",
         "   if (Test-Path -Path $path) {",
         "       $firefoxPath = $path",
-        "       info 'Firefox Installation found!'",
+        "       info '`nFirefox Installation found!'",
         "       break",
         "   }",
         "}",
