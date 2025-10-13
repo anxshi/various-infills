@@ -4,14 +4,12 @@
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
-    "suggest": {
-        "firefox-eme-free": ["extras/firefox-eme-free"]
-    },
+    "depends": "extras/firefox-eme-free",
     "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.10.03.1.zip",
     "extract_dir": "Phoenix-2025.10.03.1\\windows",
     "pre_install": [
         "if (!(installed firefox-eme-free)) {",
-        "abort '`nNo Firefox Installation Found!'",
+        "abort 'No Firefox Installation Found!'",
         "} else {",
         " info 'Firefox Installation Found'",
         "}"
