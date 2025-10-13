@@ -5,7 +5,7 @@
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
     "depends": "extras/firefox-eme-free",
-    "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.10.23.1.zip",
+    "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.10.12.1.zip",
     "extract_dir": "Phoenix-2025.10.03.1\\windows",
     "post_install": [
         "$firefoxPath = $(appdir firefox-eme-free)",
