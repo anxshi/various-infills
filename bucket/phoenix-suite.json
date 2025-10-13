@@ -23,7 +23,7 @@
         "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\distribution\" -Force"
     ],
     "pre_uninstall": [
-        "$firefoxPath = $(appdir firefox-eme-free)",
+        "$firefoxPath = $(appdir firefox-eme-free)\\current",
         "Remove-Item \"$firefoxPath\\phoenix.cfg\" -Force",
         "Remove-Item \"$firefoxPath\\defaults\\pref\\phoenix.js\" -Force",
         "Remove-Item \"$firefoxPath\\distribution\\policies.json\" -Force"
