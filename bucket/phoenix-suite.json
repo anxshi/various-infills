@@ -20,9 +20,8 @@
         "# Check each potential path",
         "foreach ($path in $potentialPaths) {",
         "   if (Test-Path -Path $path) {",
-        "       $firefoxPath = $path",
         "       info 'Firefox Installation found!'",
-        "       return",
+        "       return $firefoxPath = $path",
         "   }",
         "}",
         "error 'No Firefox Installation found!'"
