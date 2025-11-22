@@ -20,12 +20,7 @@
             "/S"
         ]
     },
-    "post_install": [
-        "",
-        ""
-    ],
     "uninstaller": {
-        "script": "",
         "args": [
             "/S /EXPRESSUNINSTALL=1"
         ]
