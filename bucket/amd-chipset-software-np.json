@@ -1,5 +1,5 @@
 {
-    "##": "Should work",
+    "##": "NOT FINALIZED YET",
     "version": "7.06.02.123",
     "description": "AMD Chipset Driver for Ryzen processors",
     "homepage": "https://www.amd.com/en/support/download/drivers.html",
@@ -11,7 +11,7 @@
     "pre_install": [
         "# Detect AMD system from SMBus vendor ID",
         "$pnpDevices = Get-WmiObject -Class Win32_PnPEntity",
-        "$amdPattern = \"PCI\\VEN_(1002&DEV_(4353|4363|4372|4385)|1022&DEV_(780B|790B))\"",
+        "$amdPattern = \"PCI\\\\VEN_(1002&DEV_(4353|4363|4372|4385)|1022&DEV_(780B|790B))\"",
         "if (!($pnpDevices.DeviceID -match $amdPattern)) {",
         "   error \"AMD system not detected.\"; break }"
     ],
