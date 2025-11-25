@@ -4,6 +4,7 @@
     "homepage": "https://filen.io/",
     "license": "AGPL-3.0",
     "notes": "",
+    "depends": "nonportable/winfsp-np",
     "architecture": {
         "64bit": {
             "url": "https://github.com/FilenCloudDienste/filen-desktop/releases/download/v3.0.47/Filen_win_x64.zip",
@@ -14,14 +15,8 @@
             "hash": "068b4cccfa57cf38d5858b88778be1379809054cfb7d1d394f496da3c603334a"
         }
     },
-    "bin": [
-        [
-            "Filen.exe",
-            "filen"
-        ]
-    ],
-    "pre_uninstall": [
-    " if ($purge) {msiexec.exe /x $dir\\build\\winfsp-*.msi /qn}"    
+    "pre_install": [
+        "Remove-Item \"$dir\\build\" -Recurse -Force"
     ],
     "shortcuts": [
         [

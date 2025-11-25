@@ -1,5 +1,5 @@
 {
-    "##": "NOT FINALIZED YET",
+    "##": "TRY TO MAKE IT PORTABLE",
     "version": "7.06.02.123",
     "description": "AMD Chipset Driver for Ryzen processors",
     "homepage": "https://www.amd.com/en/support/download/drivers.html",
@@ -15,11 +15,7 @@
         "if (!($pnpDevices.DeviceID -match $amdPattern)) {",
         "   error \"AMD system not detected.\"; break }"
     ],
-    "installer": {
-        "args": [
-            "/S"
-        ]
-    },
+    
     "checkver": {
         "url": "https://www.techpowerup.com/download/amd-ryzen-chipset-drivers/",
         "regex": "AMD Ryzen Chipset Drivers ([\\d.]+)\\s+Latest"
