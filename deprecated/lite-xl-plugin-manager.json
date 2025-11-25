@@ -18,7 +18,7 @@
     "bin": "lpm.exe",
     "shortcuts": [
 		[
-			"lpm.exe", 
+			"lpm.exe",
 			"Lite-XL Plugin Manager"
 		]
 	],

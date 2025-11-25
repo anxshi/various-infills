@@ -15,7 +15,6 @@
         "if (!($pnpDevices.DeviceID -match $amdPattern)) {",
         "   error \"AMD system not detected.\"; break }"
     ],
-    
     "checkver": {
         "url": "https://www.techpowerup.com/download/amd-ryzen-chipset-drivers/",
         "regex": "AMD Ryzen Chipset Drivers ([\\d.]+)\\s+Latest"
