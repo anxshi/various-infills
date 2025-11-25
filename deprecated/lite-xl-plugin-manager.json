@@ -17,11 +17,11 @@
     },
     "bin": "lpm.exe",
     "shortcuts": [
-		[
-			"lpm.exe",
-			"Lite-XL Plugin Manager"
-		]
-	],
+        [
+            "lpm.exe",
+            "Lite-XL Plugin Manager"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/lite-xl/lite-xl-plugin-manager"
     },
