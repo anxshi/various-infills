@@ -24,7 +24,7 @@
         "regex": "tag/v?([\\d.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip",
+        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/$basename",
         "shortcuts": [
             [
                 "pvzge-$version.exe",
