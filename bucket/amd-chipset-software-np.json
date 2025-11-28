@@ -1,4 +1,5 @@
 {
+    "##": "Running installer ... error. ERROR Exit code was 2! Installation aborted.",
     "version": "7.06.02.123",
     "description": "AMD Chipset Driver for Ryzen processors",
     "homepage": "https://www.amd.com/en/support/download/drivers.html",
