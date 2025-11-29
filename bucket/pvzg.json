@@ -20,14 +20,12 @@
     ],
     "persist": "com.pvzge.app",
     "checkver": {
-        "url": "https://github.com/Gzh0821/pvzg_site/releases",
-        "regex": "tag/v?([\\d.-]+)"
+        "url": "https://api.github.com/repos/Gzh0821/pvzg_site/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/(?<version>[\\d.]+)/pvzge-.*?\\.(?<ext>(?:zip|exe))"
     },
     "autoupdate": {
-        "url": [
-            "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip",
-            "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.exe"
-        ],
+        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$matchVersion/pvzge-$matchVersion.$matchExt",
         "shortcuts": [
             [
                 "pvzge-$version.exe",
