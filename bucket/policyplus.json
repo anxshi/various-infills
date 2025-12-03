@@ -14,7 +14,8 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/Fleex255/PolicyPlus/releases/latest",
-        "jsonpath": "$.tag_name"
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/([\\w.]+)/PolicyPlus.exe"
     }
     "autoupdate": {
         "url": "https://github.com/Fleex255/PolicyPlus/releases/download/$version/PolicyPlus.exe"
