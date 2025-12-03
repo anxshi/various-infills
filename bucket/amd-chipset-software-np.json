@@ -22,7 +22,7 @@
     },
     "checkver": {
         "url": "https://www.techpowerup.com/download/amd-ryzen-chipset-drivers/",
-        "regex": "AMD Ryzen Chipset Drivers ([\\d.]+)\\s+Latest"
+        "regex": "AMD Ryzen Chipset Drivers ([\\d.]+)(?=\\s+Download)"
     },
     "autoupdate": {
         "url": "https://drivers.amd.com/drivers/amd_chipset_software_$version.exe",
