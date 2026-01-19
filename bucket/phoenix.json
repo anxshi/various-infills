@@ -1,5 +1,5 @@
 {
-    "##": "working - scoop only",
+    "##": "experimental - try making it apply no matter how firefox was installed",
     "version": "2025.12.23.1",
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
@@ -7,14 +7,17 @@
     "depends": "extras/firefox-eme-free",
     "url": "https://github.com/celenityy/Phoenix/archive/refs/tags/2025.12.23.1.zip",
     "extract_dir": "Phoenix-2025.12.23.1\\windows",
+    "pre_install": [
+        ""
+    ],
     "post_install": [
-        "$firefoxPath = $(appdir firefox-eme-free)",
+        "$firefoxPath = ",
         "Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$firefoxPath\\current\" -Force",
         "Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$firefoxPath\\current\\defaults\\pref\" -Force",
         "Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\current\\distribution\" -Force"
     ],
     "pre_uninstall": [
-        "$firefoxPath = $(appdir firefox-eme-free)",
+        "$firefoxPath = ",
         "Remove-Item \"$firefoxPath\\current\\phoenix.cfg\" -Force",
         "Remove-Item \"$firefoxPath\\current\\defaults\\pref\\phoenix.js\" -Force",
         "Remove-Item \"$firefoxPath\\current\\distribution\\policies.json\" -Force"
