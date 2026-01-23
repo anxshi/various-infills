@@ -3,22 +3,16 @@
     "description": "An endless garden requires an endless defense! A rewritten Plants vs Zombies 2 PC port",
     "homepage": "https://pvzge.com/",
     "license": "Freeware",
-    "notes": "",
+    "notes": "Settings are stored in ~\\AppData\\Local\\com.pvzge.app, and are not persisted by Scoop.",
     "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.6.5/pvzge-0.6.5.zip",
     "hash": "602ca223fafb883405f9cfddec51aa8cdcc169b0363a8f6df1f8643034c11f5e",
-    "post_install": [
-        "if (!(Test-Path \"$persist_dir\\com.pvzge.app\") -and (Test-Path \"$env:USERPROFILE\\com.pvzge.app\")) {",
-        "    info \"Moving configs to persist directory...\"",
-        "    Copy-Item -Path \"$env:USERPROFILE\\com.pvzge.app\\*\" -Destination \"$persist_dir\\com.pvzge.app\" -Force -Recurse | Out-Null",
-        "}"
-    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\com.pvzge.app\" -Recurse -Force }",
     "shortcuts": [
         [
             "pvzge-0.6.5.exe",
             "PvZ2 Gardendless"
         ]
     ],
-    "persist": "com.pvzge.app",
     "checkver": {
         "url": "https://api.github.com/repos/Gzh0821/pvzg_site/releases",
         "jsonpath": "$..browser_download_url",
