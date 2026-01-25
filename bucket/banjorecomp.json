@@ -1,0 +1,39 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "1.0.0",
+    "description": "PC Port of Banjo-Kazooie made using N64: Recompiled",
+    "homepage": "https://github.com/BanjoRecomp/BanjoRecomp",
+    "license": "GPL-3.0",
+    "notes": [
+        "The original game is required to build or run this project.",
+        "It only accepts the US 1.0 version in the .z64 format."
+    ],
+    "url": "https://github.com/BanjoRecomp/BanjoRecomp/releases/download/v1.0.0/BanjoRecompiled-v1.0.0-Windows.zip",
+    "hash": "a55367c6ddf791b2e8596af477cab164f555f8471bf38759e17bde74f0e0b5c4",
+    "post_install": [
+        "if (!(Test-Path \"$dir\\portable.txt\")) {",
+        "    info '[Portable Mode] Adding Portable Mode File...'",
+        "    New-Item \"$dir\\portable.txt\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "saves",
+        "mods",
+        "mod_config",
+        "controls.json",
+        "general.json",
+        "graphics.json ",
+        "mods.json",
+        "sound.json"
+    ],
+    "shortcuts": [
+        [
+            "BanjoRecompiled.exe",
+            "Banjo-Kazooie Recompiled"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/BanjoRecomp/BanjoRecomp/releases/download/v$version/BanjoRecompiled-v$version-Windows.zip"
+    }
+}
