@@ -1,11 +1,10 @@
 {
-    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
     "version": "1.0.0",
     "description": "PC Port of Banjo-Kazooie made using N64: Recompiled",
     "homepage": "https://github.com/BanjoRecomp/BanjoRecomp",
     "license": "GPL-3.0",
     "notes": [
-        "The original game is required to build or run this project.",
+        "The original game is required to run this project.",
         "It only accepts the US 1.0 version in the .z64 format."
     ],
     "url": "https://github.com/BanjoRecomp/BanjoRecomp/releases/download/v1.0.0/BanjoRecompiled-v1.0.0-Windows.zip",
