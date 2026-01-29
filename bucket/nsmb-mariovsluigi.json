@@ -1,0 +1,47 @@
+{
+    "##": "Stores Data in %LOCALAPPDATA%",
+    "version": "2.0.4.1",
+    "description": "Standalone Unity remake of New Super Mario Bros DS' multiplayer gamemode, \"Mario vs Luigi\".",
+    "homepage": "https://ipodtouch0218.itch.io/nsmb-mariovsluigi",
+    "license": "Unknown",
+    "notes": "Configs are stored in \"$env:LOCALAPPDATA\\ipodtouch0218\\NSMB-MarioVsLuigi\", and are not persisted by Scoop.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v2.0.4.1/MarioVsLuigi-Win64-v2.0.4.1.zip",
+            "hash": "57ade81d0109b80e7829f1f41eef007064424d77f26127cb85f34c576a8eb97e",
+            "extract_dir": "MarioVsLuigi-Win64"
+        },
+        "32bit": {
+            "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v2.0.4.1/MarioVsLuigi-Win32-v2.0.4.1.zip",
+            "hash": "2932f9b6afeb9b13f7d06eacdccb64e42c1f5f361c3e6202378ec0baf1c8e812",
+            "extract_dir": "MarioVsLuigi-Win32"
+        },
+        "arm64": {
+            "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v2.0.4.1/MarioVsLuigi-Win64ARM-v2.0.4.1.zip",
+            "hash": "309ee1c41cb314713b98844d9d0db4cec92c6d8a986422d15d8e36c7b37cd394",
+            "extract_dir": "MarioVsLuigi-Win64ARM"
+        }
+    },
+    "shortcuts": [
+        [
+            "NSMB-MarioVsLuigi.exe",
+            "NSMB - Mario Vs Luigi Online"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v$version/MarioVsLuigi-Win64-v$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v$version/MarioVsLuigi-Win32-v$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ipodtouch0218/NSMB-MarioVsLuigi/releases/download/v$version/MarioVsLuigi-Win64ARM-v$version.zip"
+            }
+        }
+    }
+}
