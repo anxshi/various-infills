@@ -8,9 +8,13 @@ Personal bucket for [Scoop](https://scoop.sh), the Windows command-line installe
 
 ## How to install?
 
-After manifests have been committed and pushed, run the following:
+Run the following:
 
 ```pwsh
 scoop bucket add various-infills https://github.com/anxshi/various-infills
 scoop install various-infills/<manifestname>
 ```
+## Bucket Info
+Manifest names that end with "-np" indicate that the App is non-portable due to a forced Setup Installer for example.
+Apps that save Data in AppData won't get persisted by Scoop, but you will be notfied about this. This also applies to leftover Data outside the Scoop directory when purging (`uninstall --purge`).
+Interesting? -> https://github.com/ScoopInstaller/Scoop/issues/6542
