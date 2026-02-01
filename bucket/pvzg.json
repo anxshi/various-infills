@@ -4,7 +4,7 @@
     "description": "An endless garden requires an endless defense! A rewritten Plants vs Zombies 2 PC port",
     "homepage": "https://pvzge.com/",
     "license": "Freeware",
-    "notes": "Configs are stored in \"$env:LOCALAPPDATA\\com.pvzge.app\", and are not persisted by Scoop.",
+    "notes": "Configs are stored in \"%LOCALAPPDATA%\\com.pvzge.app\", and are not persisted by Scoop.",
     "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.6.6/pvzge-0.6.6.zip",
     "hash": "91d8619e1d85a5587c4c0af7d8338f895567233f6d73cd07b91972ceba6952d5",
     "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\com.pvzge.app\" -Recurse -Force }",
