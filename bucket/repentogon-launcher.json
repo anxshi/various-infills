@@ -1,10 +1,10 @@
 {
-    "version": "0.3.12-beta",
+    "version": "v0.4.1-beta",
     "description": "Launcher for Repentogon - Script extender for The Binding of Isaac: Repentance",
     "homepage": "https://repentogon.com/",
     "license": "GPL-2.0",
-    "url": "https://github.com/TeamREPENTOGON/Launcher/releases/download/v0.3.12-beta/REPENTOGONLauncher.zip",
-    "hash": "714b9614378a939cc763c030671661931c32471f2557421742ed41d294cbc930",
+    "url": "https://github.com/TeamREPENTOGON/Launcher/releases/download/v0.4.1-beta/REPENTOGONLauncher.zip",
+    "hash": "4214f3cff0981bd01ea24552f6298f2bef1670f2a9dc48d7461c86820f747839",
     "shortcuts": [
         [
             "REPENTOGONLauncher.exe",
