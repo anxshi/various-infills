@@ -1,0 +1,17 @@
+{
+    "version": "2.3.1",
+    "description": "Export all Microsoft To Do lists and tasks to importable formats.",
+    "homepage": "https://github.com/daylamtayari/Microsoft-To-Do-Export",
+    "license": "GPL-3.0-only",
+    "notes": "A Microsoft Graph API token is required to use this program.",
+    "url": "https://github.com/daylamtayari/Microsoft-To-Do-Export/releases/download/v2.3.1/mstodoexport-windows-amd64.exe",
+    "hash": "dc62c6ca36ceb984c8ca8ccfd14d8a6250b8666bd5656e8db1d049a1db353514",
+    "bin": [ [
+        "mstodoexport-windows-amd64.exe",
+        "mstodoexport"
+        ] ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/daylamtayari/Microsoft-To-Do-Export/releases/download/$version/mstodoexport-windows-amd64.exe"
+        }
+}
