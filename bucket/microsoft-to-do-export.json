@@ -11,7 +11,7 @@
     "hash": "472385c88adb106f61456ca4d4a97b7eb211f8c5b1400d8b95ea798f9d0abcfa",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\YOURTOKEN.FILE\")) {",
-        "New-Item \"$dir\\YOURTOKEN.FILE\" Item-Type File | Out-Null}"
+        "New-Item \"$dir\\YOURTOKEN.FILE\" | Out-Null }"
     ],
     "bin": [
         "mstodoexport-windows-amd64.exe",
