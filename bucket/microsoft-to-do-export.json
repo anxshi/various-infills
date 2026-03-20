@@ -17,7 +17,7 @@
         [
             "mstodoexport-windows-amd64.exe",
             "mstodoexport",
-            "--token-file $persist_dir\\YOURTOKEN.FILE\\"
+            "--token-file $persist_dir\\YOURTOKEN.FILE"
         ]
     ],
     "persist": "YOURTOKEN.FILE",
