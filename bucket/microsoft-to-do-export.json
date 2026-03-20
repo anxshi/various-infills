@@ -14,10 +14,12 @@
         "New-Item \"$dir\\YOURTOKEN.FILE\" | Out-Null }"
     ],
     "bin": [
-        "mstodoexport-windows-amd64.exe",
-        "mstodoexport",
-        "--token-file \"$dir\\YOURTOKEN.FILE\""
-        ],
+        [
+            "mstodoexport-windows-amd64.exe",
+            "mstodoexport",
+            "--token-file $dir\\YOURTOKEN.FILE\\"
+        ]
+    ],
     "persist": "YOURTOKEN.FILE",
     "checkver": "github",
     "autoupdate": {
