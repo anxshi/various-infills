@@ -1,20 +1,20 @@
 {
-    "##": "working with scoop-installed firefox only",
     "version": "2026.02.23.1",
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
     "depends": "extras/firefox-eme-free",
     "url": "https://codeberg.org/celenity/Phoenix/archive/2026.02.23.1.zip",
+    "hash": "a2b1117646d6232de6f1145b866f516e4e17722f9c596fb11b86bf5f7d00d9b7",
     "extract_dir": "Phoenix\\windows",
     "post_install": [
         "$firefoxPath = appdir 'firefox-eme-free'",
         "# Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$firefoxPath\\current\" -Force",
         "# Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$firefoxPath\\current\\defaults\\pref\" -Force",
         "# Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\current\\distribution\" -Force",
-        "New-Item -ItemType HardLink -Path \"$dir\\phoenix.cfg\" -Target \"$firefoxPath\\current\\phoenix.cfg\" -Force | Out-Null",
-        "New-Item -ItemType HardLink -Path \"$dir\\defaults\\pref\\phoenix.js\" -Target \"$firefoxPath\\current\\phoenix.js\" -Force | Out-Null",
-        "New-Item -ItemType HardLink -Path \"$dir\\distribution\\policies.json\" -Target \"$firefoxPath\\current\\distribution\\policies.json\" -Force | Out-Null"
+        "New-Item -ItemType HardLink -Target \"$dir\\phoenix.cfg\" -Path \"$firefoxPath\\current\\phoenix.cfg\" -Force | Out-Null",
+        "New-Item -ItemType HardLink -Target \"$dir\\defaults\\pref\\phoenix.js\" -Path \"$firefoxPath\\current\\phoenix.js\" -Force | Out-Null",
+        "New-Item -ItemType HardLink -Target \"$dir\\distribution\\policies.json\" -Path \"$firefoxPath\\current\\distribution\\policies.json\" -Force | Out-Null"
     ],
     "checkver": {
         "url": "https://codeberg.org/api/v1/repos/celenity/phoenix/releases/latest",
