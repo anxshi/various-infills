@@ -9,9 +9,6 @@
     "extract_dir": "Phoenix\\windows",
     "post_install": [
         "$firefoxPath = appdir 'firefox-eme-free'",
-        "# Copy-Item -Path \"$dir\\phoenix.cfg\" -Destination \"$firefoxPath\\current\" -Force",
-        "# Copy-Item -Path \"$dir\\defaults\\pref\\phoenix.js\" -Destination \"$firefoxPath\\current\\defaults\\pref\" -Force",
-        "# Copy-Item -Path \"$dir\\distribution\\policies.json\" -Destination \"$firefoxPath\\current\\distribution\" -Force",
         "New-Item -ItemType HardLink -Target \"$dir\\phoenix.cfg\" -Path \"$firefoxPath\\current\\phoenix.cfg\" -Force | Out-Null",
         "New-Item -ItemType HardLink -Target \"$dir\\defaults\\pref\\phoenix.js\" -Path \"$firefoxPath\\current\\phoenix.js\" -Force | Out-Null",
         "New-Item -ItemType HardLink -Target \"$dir\\distribution\\policies.json\" -Path \"$firefoxPath\\current\\distribution\\policies.json\" -Force | Out-Null"
