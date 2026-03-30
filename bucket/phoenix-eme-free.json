@@ -4,20 +4,16 @@
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
     "depends": "extras/firefox-eme-free",
-    "url": "https://codeberg.org/celenity/Phoenix/archive/2026.02.23.1.zip",
-    "hash": "a2b1117646d6232de6f1145b866f516e4e17722f9c596fb11b86bf5f7d00d9b7",
-    "extract_dir": "Phoenix\\windows",
+    "url": "https://codeberg.org/celenity/Phoenix/src/branch/dev/archives/phoenix-windows.zip",
+    "hash": "53aefaa1efed9fbeae22896204e7dd623bbfaee6ee8b4045188dee78749dfb4a",
     "post_install": [
-        "$firefoxPath = appdir 'firefox-eme-free'",
+        "$firefoxPath = persistdir 'firefox-eme-free'",
         "New-Item -ItemType HardLink -Target \"$dir\\phoenix.cfg\" -Path \"$firefoxPath\\current\\phoenix.cfg\" -Force | Out-Null",
-        "New-Item -ItemType HardLink -Target \"$dir\\defaults\\pref\\phoenix.js\" -Path \"$firefoxPath\\current\\phoenix.js\" -Force | Out-Null",
+        "New-Item -ItemType HardLink -Target \"$dir\\defaults\\pref\\phoenix.js\" -Path \"$firefoxPath\\current\\defaults\\pref\\phoenix.js\" -Force | Out-Null",
         "New-Item -ItemType HardLink -Target \"$dir\\distribution\\policies.json\" -Path \"$firefoxPath\\current\\distribution\\policies.json\" -Force | Out-Null"
     ],
     "checkver": {
         "url": "https://codeberg.org/api/v1/repos/celenity/phoenix/releases/latest",
         "jsonpath": "$.tag_name"
-    },
-    "autoupdate": {
-        "url": "https://codeberg.org/celenity/Phoenix/archive/$version.zip"
     }
 }
