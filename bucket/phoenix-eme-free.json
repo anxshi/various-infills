@@ -7,7 +7,7 @@
     "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip",
     "hash": "53aefaa1efed9fbeae22896204e7dd623bbfaee6ee8b4045188dee78749dfb4a",
     "post_install": [
-        "$firefoxPath = \"(appdir firefox-eme-free)\\current\"",
+        "$firefoxPath = \"$(appdir firefox-eme-free)\\current\"",
         "New-Item -ItemType HardLink -Target \"$dir\\phoenix.cfg\" -Path \"$firefoxPath\\phoenix.cfg\" -Force | Out-Null",
         "New-Item -ItemType HardLink -Target \"$dir\\defaults\\pref\\phoenix.js\" -Path \"$firefoxPath\\defaults\\pref\\phoenix.js\" -Force | Out-Null",
         "New-Item -ItemType HardLink -Target \"$dir\\distribution\\policies.json\" -Path \"$firefoxPath\\distribution\\policies.json\" -Force | Out-Null"
