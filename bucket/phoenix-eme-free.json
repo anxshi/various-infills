@@ -4,7 +4,7 @@
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
     "depends": "extras/firefox-eme-free",
-    "url": "https://codeberg.org/celenity/Phoenix/src/branch/dev/archives/phoenix-windows.zip",
+    "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip",
     "hash": "53aefaa1efed9fbeae22896204e7dd623bbfaee6ee8b4045188dee78749dfb4a",
     "post_install": [
         "$firefoxPath = persistdir 'firefox-eme-free'",
