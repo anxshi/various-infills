@@ -6,7 +6,7 @@
     "depends": "extras/firefox-eme-free",
     "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip",
     "hash": "53aefaa1efed9fbeae22896204e7dd623bbfaee6ee8b4045188dee78749dfb4a",
-    "pre_install": "New-Item -ItemType Junction -Path \"$dir\" -Target \"$(appdir firefox-eme-free)\\current\" -Force | Out-Null",
+    "post_install": "New-Item -ItemType Junction -Target \"$dir\" -Path \"$(appdir firefox-eme-free)\\current\" -Force | Out-Null",
     "persist": [
         "phoenix.cfg",
         "defaults\\pref\\phoenix.js",
