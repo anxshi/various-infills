@@ -16,5 +16,8 @@
     "checkver": {
         "url": "https://codeberg.org/api/v1/repos/celenity/phoenix/releases/latest",
         "jsonpath": "$.tag_name"
+    },
+    "autoupdate": {
+        "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip"
     }
 }
