@@ -1,12 +1,12 @@
 {
     "##": "If dependency updated, this app needs to be force updated manually by the user in order to restore the filelinks created by postisntall - They get left behind by scoop when firefox is updated because there's no way to persist them without touching the known bucket manifest",
-    "version": "2026.02.23.1",
+    "version": "2026.03.31.1",
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
     "depends": "extras/firefox-eme-free",
     "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip",
-    "hash": "53aefaa1efed9fbeae22896204e7dd623bbfaee6ee8b4045188dee78749dfb4a",
+    "hash": "9afe8d82e32d387fd95e3fe2690ff9f15775277f47e6e82c07c7f900e531ab8c",
     "post_install": [
         "$firefoxPath = \"$(appdir firefox-eme-free)\\current\"",
         "Copy-Item \"$dir\\phoenix.cfg\" \"$firefoxPath\" -Force | Out-Null",
