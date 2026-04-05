@@ -175,7 +175,7 @@
         "    abort \"`n$app requires admin rights for $location\"",
         "}",
         "if (-not (Test-Path $firefoxPath)) {",
-        "    warn \"Firefox directory not found: $firefoxPath `nnothing to remove.\"",
+        "    info \"`n - nothing to remove.`nFirefox directory not found: $firefoxPath\"",
         "    return",
         "}",
         "",
