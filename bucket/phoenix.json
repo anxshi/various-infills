@@ -3,7 +3,12 @@
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
-    "notes": "Please be aware to run 'scoop update phoenix --force' after every Scoop Firefox update.",
+    "notes": [
+        "To select another Firefox installation, be sure to run 'scoop uninstall phoenix --purge',",
+        "as this ensures the persisted .ini file is deleted.",
+        "For Scooped Firefox Users only:",
+        "Please be aware to run 'scoop update phoenix --force' after every Firefox update."
+    ],
     "url": "https://codeberg.org/celenity/Phoenix/raw/branch/dev/archives/phoenix-windows.zip",
     "hash": "9afe8d82e32d387fd95e3fe2690ff9f15775277f47e6e82c07c7f900e531ab8c",
     "pre_install": [
@@ -55,7 +60,7 @@
         "    }",
         "    if (-not $bucket) { $bucket = \"<unknown>\" }",
         "    $scoopFirefox += [PSCustomObject]@{",
-        "        appname  = \"$bucket/$appName\"",
+        "        appname  = $appName",
         "        location = $bucket",
         "        source   = \"scoop\"",
         "    }",
@@ -76,7 +81,7 @@
         "for ($i = 0; $i -lt $allChoices.Count; $i++) {",
         "    $choice = $allChoices[$i]",
         "    $display = if ($choice.source -eq \"scoop\") {",
-        "        \"Scoop: $($choice.appname)\"",
+        "        \"Scoop: $($choice.location)/$($choice.appname)\"",
         "    } else {",
         "        \"System: $($choice.appname)\"",
         "    }",
