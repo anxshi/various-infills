@@ -4,7 +4,7 @@
     "description": "Phoenix is a suite of configurations & advanced modifications for Mozilla Firefox, designed to put the user first - with a focus on privacy, security, freedom, & usability.",
     "homepage": "https://phoenix.celenity.dev/",
     "license": "GPL-3.0-or-later",
-    "notes": "After Phoenix is installed, you MUST force-update Firefox to ensure all of Phoenix's changes are applied.",
+    "notes": "After Phoenix is installed, you MUST restart Firefox after its first run with Phoenix installed. This ensures all of Phoenix's changes are applied.",
     "url": "https://phoenix.celenity.dev/archives/phoenix-windows.zip",
     "hash": "9afe8d82e32d387fd95e3fe2690ff9f15775277f47e6e82c07c7f900e531ab8c",
     "pre_install": [
