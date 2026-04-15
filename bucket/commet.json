@@ -1,0 +1,23 @@
+{
+    "version": "0.4.1",
+    "homepage": "https://commet.chat/",
+    "description": "A Matrix Client focused on providing a feature rich experience while maintaining a simple interface.",
+    "license": "AGPL-3.0-only",
+    "notes": "Settings are stored in the ~\\AppData\\Roaming\\commet.chat\\commet directory.",
+    "url": "https://github.com/commetchat/commet/releases/download/v0.4.1/commet-windows.zip",
+    "hash": "11a08e4fda01b267ae8c2dd9cd32877cc2308b277db3bc6591a7e261d8f2f911",
+    "extract_dir": "Release",
+    "bin": "commet.exe",
+    "shortcuts": [
+        [
+            "Commet.exe",
+            "Commet"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/commetchat/commet"
+    },
+    "autoupdate": {
+    "url": "https://github.com/commetchat/commet/releases/download/v$version/commet-windows.zip"
+    }
+}
