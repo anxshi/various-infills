@@ -4,8 +4,6 @@
 
 Personal bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
-<!-- If you'd like your bucket to be indexed on `https://scoop.sh`, add the topic `scoop-bucket` to your repository. -->
-
 ## How to install?
 
 Run the following:
