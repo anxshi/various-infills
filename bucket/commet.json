@@ -15,7 +15,9 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/commetchat/commet"
+        "url": "https://api.github.com/repos/commetchat/commet/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/commetchat/commet/releases/download/v$version/commet-windows.zip"
