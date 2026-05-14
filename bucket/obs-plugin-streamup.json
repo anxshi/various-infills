@@ -1,5 +1,5 @@
 {
-    "version": "2.3.3",
+    "version": "2.2.3",
     "homepage": "https://github.com/StreamUPTips/obs-streamup",
     "description": "This toolkit that makes OBS less annoying. Product installation, plugin update checking, scene organisation, custom docks, a toolbar, dedicated hotkeys, a source type, a full WebSocket API, and a pile of quality of life bits. All in one plugin.",
     "license": "GPL-2.0",
