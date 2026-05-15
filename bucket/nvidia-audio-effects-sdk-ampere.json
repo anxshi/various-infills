@@ -23,10 +23,10 @@
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
             "$dll = Join-Path $env:ProgramFiles 'NVIDIA Corporation\\Installer2\\InstallerCore\\NVI2.DLL'",
-            "$args = \"`\"$dll`\",UninstallPackage AudioEffects -silent -n -deviceinitiated\"",
+            "$args = '\"$dll\",UninstallPackage AudioEffects', '-silent', '-n', '-deviceinitiated'",
             "$exe = \"$env:SystemRoot\\SysWOW64\\RunDll32.EXE\"",
-            "$success = Invoke-ExternalCommand -FilePath $exe -ArgumentList $args -RunAs",
-            "if (!$success) { abort \"$cmd failed\" }"
+            "$success = Start-Process -FilePath $exe -ArgumentList $args -RunAs -Wait -PassThru",
+            "if ($success.ExitCode -gt 1) { abort \"$cmd failed with Exit Code: $($process.ExitCode)\" }"
         ]
     },
     "checkver": {
