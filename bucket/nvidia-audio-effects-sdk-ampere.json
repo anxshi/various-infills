@@ -10,13 +10,13 @@
     "url": "https://international.download.nvidia.com/Windows/broadcast/sdk/AFX/2025-01-21_NVIDIA_AFX_SDK_Win_v1.6.1.2-GA_Ampere.exe#/nvidia_afx_sdk_ampere.7z",
     "hash": "731ec874965a5ffe8e1dd1336ffbee98f2d191f241ff63e219041ed9e4d76d7a",
     "installer": {
-        "file": "setup.exe",
-        "args": [
-            "-s",
-            "-n",
-            "-noeula",
-            "-nofinish",
-            "-clean"
+        "script": [
+            "if (-not (is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
+            "",
+            "$success = Invoke-ExternalCommand -Path \"$dir\\setup.exe\" @Args('-s', '-noreboot', '-noeula', '-nofinish', '-clean', \"-log:$dir\\logs\", '-loglevel:4')",
+            "if (!$success) { error \"setup.exe failed, check logs at '$dir\\logs'\" ; break }",
+            "Remove-Item \"$dir\\logs\" -Force -Recurse"
         ]
     },
     "uninstaller": {
