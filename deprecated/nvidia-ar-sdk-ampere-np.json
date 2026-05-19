@@ -1,0 +1,36 @@
+{
+    "version": "0.8.7.0",
+    "description": "AR SDK - For NVIDIA GeForce RTX 30 Series or NVIDIA RTX Ampere Generation GPUs",
+    "homepage": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.nvidia.com/en-us/drivers/nvidia-license/"
+    },
+    "notes": "",
+    "url": "https://international.download.nvidia.com/Windows/broadcast/sdk/AR/nvidia_ar_sdk_installer_v0.8.7_ampere.exe#/setup.exe",
+    "hash": "93bdf4ffec7c393037936349678d1864897fef45d7ba2ab81d4b1563e1328512",
+    "installer": {
+        "script": [
+            "if (-not (is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "if ([environment]::OSVersion.Version.Major -lt 10) { error 'This package requires Windows 10/11 to install'; break }",
+            "",
+            "$success = Invoke-ExternalCommand -Path \"$dir\\setup.exe\" @Args('/S', \"/D=§dir\")",
+            "if (!$success) { error \"setup.exe failed\" ; break }"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($cmd -ne 'uninstall') { return }",
+            "if (-not (is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "",
+            "$success = Invoke-ExternalCommand -Path \"$dir\\uninstall.exe\" @Args('/S')",
+            "if (!$success) { error \"setup.exe failed\" ; break }"
+        ]
+    },
+    "checkver": {
+        "regex": "ar.*?v([\\d.]+)_ampere\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://international.download.nvidia.com/Windows/broadcast/sdk/AR/nvidia_ar_sdk_installer_v$version_ampere.exe#/setup.exe"
+    }
+}
