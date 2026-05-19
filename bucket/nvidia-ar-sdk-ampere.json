@@ -12,7 +12,7 @@
         "The SDK is intended for use with NVIDIA Ampere (RTX 30 series) or newer GPUs."
     ],
     "url": "https://international.download.nvidia.com/Windows/broadcast/sdk/AR/nvidia_ar_sdk_installer_v0.8.7_ampere.exe#/dl.7z",
-    "hash": "93bdf4ffec7c393037936349678d1864897fef45d7ba2ab81d4b1563e1328512",
+    "hash": "2d237da124116a7f4d7b9ed95623a26eaafb6a99b692a6e4c2b41e143f2fd633",
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\setpaths.exe\", \"$dir\\uninstall.exe.nsis\"  -Recurse -Force -ErrorAction SilentlyContinue",
     "env_set": {
         "NVAR_MODEL_DIR": "$dir\\models"
