@@ -16,7 +16,7 @@
     ],
     "installer": {
         "script": [
-            "Start-Process -Wait \"$dir\\$fname\" -Verb RunAs | Out-Null"
+            "Start-Process \"$dir\\$fname\" -ArgumentList '/S' -Verb RunAs -Wait | Out-Null"
         ]
     },
     "checkver": {
