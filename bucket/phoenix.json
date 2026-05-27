@@ -94,6 +94,9 @@
         "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://releases.celenity.dev/phoenix/releases/$version/windows/phoenix-$version-windows.zip"
+        "url": "https://releases.celenity.dev/phoenix/releases/$version/windows/phoenix-$version-windows.zip",
+        "hash": {
+            "url": "$url-sha512sum.txt"
+        }
     }
 }
