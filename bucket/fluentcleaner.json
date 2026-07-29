@@ -16,10 +16,7 @@
                 "039128b2c30baee2c980b993c945261ea05b3184b5392fc43e4aa4ef94d10711",
                 "e955f87694c7ba098840905bd97b0b3673178bee08f3adf242159bc63329e587"
             ],
-            "extract_dir": [
-                "FluentCleaner-win-x64",
-                "Custom"
-            ]
+            "extract_dir": "FluentCleaner-win-x64"
         }
     },
     "pre_install": [
