@@ -3,14 +3,18 @@
     "version": "0.12.1",
     "description": "An endless garden requires an endless defense! A rewritten Plants vs Zombies 2 PC port",
     "homepage": "https://pvzge.com/",
-    "license": "Freeware",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://pvzge.com/en/instructions/Agreement.html"
+    },
     "notes": "Scoop doesn't persist Data stored at:`n\"%APPDATA%\\com.pvzge.game\"`n\"%LOCALAPPDATA%\\com.pvzge.game\"",
     "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.12.1/pvzge-0.12.1.zip",
     "hash": "a3ed6dfc86af9347bbcbf8c16720ae7c04533dc4f81564869be136cfc2a5792c",
+    "pre_install": "Get-ChildItem \"$dir\\pvzge-*.exe\" | Rename-Item -NewName 'pvzge.exe'",
     "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.pvzge.game\", \"$env:LOCALAPPDATA\\com.pvzge.game\" -Recurse -Force }",
     "shortcuts": [
         [
-            "pvzge-0.12.1.exe",
+            "pvzge.exe",
             "PvZ2 Gardendless"
         ]
     ],
@@ -19,12 +23,6 @@
         "regex": "/releases/tag/([\\d.]+[-\\w.]*)"
     },
     "autoupdate": {
-        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip",
-        "shortcuts": [
-            [
-                "pvzge-$version.exe",
-                "PvZ2 Gardendless"
-            ]
-        ]
+        "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip"
     }
 }
