@@ -12,9 +12,7 @@
     "bin": [
         [
             "EvergreenAdmx.ps1",
-            "EvergreenAdmx",
-            "powershell.exe -ExecutionPolicy Bypass -File \"$dir\\EvergreenAdmx.ps1\""
-        ]
+            "EvergreenAdmx"        ]
     ],
     "checkver": "github",
     "autoupdate": {
