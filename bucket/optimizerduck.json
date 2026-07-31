@@ -1,5 +1,5 @@
 {
-    "##": "Stores Data in %LOCALAPPDATA%",
+    "##": "Stores Data in %LOCALAPPDATA%\\optimizerDuck",
     "version": "2.25.5",
     "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
     "homepage": "https://optimizerduck.vercel.app/",
