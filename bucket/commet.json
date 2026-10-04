@@ -15,8 +15,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/commetchat/commet",
-        "regex": "v(\\d+\\.\\d+\\.\\d+(?:\\+hotfix\\.\\d+)?)"
+        "github": "https://api.github.com/repos/commetchat/commet/releases/latest",
+        "regex": "v([\\d.]+(?:\\+hotfix\\.\\d+)?)"
     },
     "autoupdate": {
         "url": "https://github.com/commetchat/commet/releases/download/v$version/commet-windows.zip"

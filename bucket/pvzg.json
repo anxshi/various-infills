@@ -19,8 +19,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.github.com/Gzh0821/pvzg_site/releases",
-        "regex": "/releases/tag/([\\d.]+[-\\w.]*)"
+        "url": "https://api.github.com/repos/Gzh0821/pvzg_site/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\d.]+[-\\w.]*)"
     },
     "autoupdate": {
         "url": "https://github.com/Gzh0821/pvzg_site/releases/download/$version/pvzge-$version.zip"
