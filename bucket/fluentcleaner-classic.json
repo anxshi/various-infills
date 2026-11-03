@@ -1,0 +1,35 @@
+{
+    "version": "1.18.250",
+    "description": "FluentCleaner is the transparent, community-powered CCleaner alternative for Windows",
+    "homepage": "https://github.com/builtbybel/FluentCleaner",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/builtbybel/FluentCleaner/blob/main/LICENSE"
+    },
+    "url": "https://github.com/builtbybel/FluentCleaner/releases/download/26.09.01/FluentCleaner-Classic-net48.zip",
+    "hash": "42703e673cff81eb9d2ec7f8eacaaf93fa009915ffca40e54b63ba789d80fe85",
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\settings.json\")) {",
+        "    info '[Portable Mode] Adding Portable Mode File...'",
+        "    New-Item \"$dir\\settings.json\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "FluentCleaner.Classic.exe",
+            "FluentCleaner Classic"
+        ]
+    ],
+    "persist": [
+        "settings.json",
+        "Custom"
+    ],
+    "checkver": {
+        "github": "https://github.com/builtbybel/FluentCleaner",
+        "regex": "(?sm)tag/(?<version>[\\d.]+).*?Classic.*?WinForms.*?(?:<code>|`)(?<classic>[\\d.]+)",
+        "replace": "${classic}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/builtbybel/FluentCleaner/releases/download/$version/FluentCleaner-Classic-net48.zip"
+    }
+}
