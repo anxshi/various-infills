@@ -1,6 +1,6 @@
 {
     "##": "Stores Data in %APPDATA%",
-    "version": "0.16.14",
+    "version": "0.16.15",
     "description": "An endless garden requires an endless defense! A rewritten Plants vs Zombies 2 PC port",
     "homepage": "https://pvzge.com/",
     "license": {
@@ -8,8 +8,8 @@
         "url": "https://pvzge.com/en/instructions/Agreement.html"
     },
     "notes": "Scoop doesn't persist Data stored at:`n\"%APPDATA%\\com.pvzge.game\"`n\"%LOCALAPPDATA%\\com.pvzge.game\"",
-    "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.16.14/pvzge-0.16.14.zip",
-    "hash": "37343b3400e6b71a5c2e24c29bb4a06f571b35858a267b332c90216903b0ea33",
+    "url": "https://github.com/Gzh0821/pvzg_site/releases/download/0.16.15/pvzge-0.16.15.zip",
+    "hash": "7d2636f74f220aee980a0128dfb294e570d0a796456252fad4c4fcf0fdb9daf9",
     "pre_install": "Get-ChildItem \"$dir\\pvzge-*.exe\" | Rename-Item -NewName 'pvzge.exe'",
     "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.pvzge.game\", \"$env:LOCALAPPDATA\\com.pvzge.game\" -Recurse -Force }",
     "shortcuts": [
